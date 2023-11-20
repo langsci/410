@@ -1,0 +1,471 @@
+\chapter{Phoneme split}\label{ch:Phoneme-Split}
+
+In this chapter I will develop a model of \isi{phoneme split}, or genesis,
+using the phenomenon of \isi{vowel nasalization} as a case study. The model
+will be based on the analyses of the preceding chapters: the metric
+of success will be representational consistency and stability, with
+the ability to achieve multiple stable states under different parameter
+settings. The relevant parameters will also be required to serve as
+testable hypotheses about possible \isi{actuation} mechanisms. 
+The major innovation of the Multiple-Parse Model model will be an explicit,
+non-one-to-one, perception-to-\isi{production} mapping in which the likelihood
+of a given analysis depends on the \isi{phonetic} properties of the input.
+Additionally, no analysis is taken to be more ``correct'' than any other,
+just as the set of possible \isi{sub-lexical} units is not taken to be determined
+ahead of time.
+
+\section{Nasalization}\largerpage
+It has been well-established in both \isi{perception} and \isi{production} that
+there is a negative correlation between degree of \isi{vowel nasalization} and strength
+of nasal consonant (e.g. \citealt{kawasaki1978perceived,cohn1990phonetic}).
+This is consistent with the hypothesis that the final nasal is more
+likely to be lost, the more nasalized the preceding vowel becomes.
+A possible explanation can be found in a listener-oriented theory
+of change, where speakers strive to preserve acoustic cues for ease
+of listener comprehension. Strong nasal cues on the vowel predict
+the upcoming nasal, which means that speakers may expend less effort
+to preserve the actual nasal, allowing it to erode. As with other
+proposals, the question that still remains to be answered is how the
+vowel came to have such strong nasal cues in the first place (presumably
+stronger than the typical range of \isi{phonetic} \isi{nasalization} observed
+cross-linguistically). 
+
+A different perspective will be adopted here, building on the observation
+of \citet{Beddor2009} that the negative correlation between vowel
+\isi{nasality} and consonant \isi{nasality} follows directly from a single \isi{articulatory}
+parameter: the degree of overlap of the vowel and nasal gestures.
+The more overlap, the greater the extent of \isi{nasalization} on the vowel,
+and the shorter the duration of the purely consonantal nasal, and
+vice versa (see \figref{fig:Normal nasalization}). It will be assumed
+that successful \isi{production} requires stored \isi{articulatory} targets, and
+that these must be inferred from acoustic inputs. Categorization will occur at the level
+of the word, and does not require decomposition into phonemes. Thus,
+this model will not assume that there exists an \isi{allophonic} rule
+of \isi{vowel nasalization}. 
+
+\section{Parsing and misparsing}
+
+In order to recover the meaning of a given speech signal, it is necessary,
+at minimum, to identify the individual lexical items present. This,
+in turn, requires determining where one word ends and the next begins.
+The highly context-sensitive nature of acoustic cues, as well as the
+lack of consistent silence, or other markers, of the boundaries between
+words or sounds, make this a computationally difficult task. And this
+is not just an acquisition problem. Signal \isi{parsing}, or segmentation,
+is something that must be carried out every time speech is perceived. 
+
+That segmentation of some kind must also take place at the \isi{sub-lexical}
+level is evidenced by a large literature on what are known as “trading
+relations”, in which the value along a given \isi{phonetic} dimension
+that separates two members of a phonemic contrast is shown to vary
+depending on the values of the other \isi{phonetic} cues present. And those
+other cues that influence the boundary location are not just those
+that occur within the segment itself. For example, a given phone ({[t]})
+may be ambiguous as to whether it belongs with a preceding or following
+word (e.g. \textit{great ship} {[}{ɡɹe͡ɪt}\#{ʃɪp}{]}
+versus \textit{gray chip} {[}{ɡɹe͡ɪ}\#{t͡ʃɪp}{]}),
+and the actual word sequence that is heard will depend on the durations
+of the surrounding segments; longer durations of {[e͡ɪ]}
+increase the likelihood of \textit{gray} over \textit{great}, while
+shorter durations of {[ʃ]} increase the likelihood of \textit{chip}
+over \textit{ship}. An acoustic cue (such as silence itself) may also
+be ambiguous as to whether it originates from a \isi{phoneme} ({/t/})
+or a break between words (\textit{great ship} versus \textit{gray ship}
+{[}{ɡɹe͡ɪ}\#{ʃɪp}{]}; longer durations of silence
+increase the likelihood of \textit{great} over \textit{gray} (\citealt{repp1978perceptual}).
+An acoustic feature may also be ambiguous as to whether it belongs
+to a preceding segment, a following segment, or both ({[}{ɹa͡ɪpbɛɹiz}{]}
+as either \textit{right berries} or \textit{ripe berries}, \citealt{Gow2003}). 
+
+In all of the preceding examples the ambiguity exists because of the
+existence of multiple real-word alternatives. Without those alternatives,
+or competitors, phonetically ambiguous input quickly becomes perceptually
+unambiguous (e.g. \citealp{warren1970perceptual,ganong1980phonetic}).
+The strong susceptibility of low-level \isi{perception} to high-level expectations
+also speaks to the amount of noise, or essentially unpredictable variability,
+in the acoustic realization of a given abstract category. Speech \isi{perception}
+involves the complex integration of multiple cues, each of which,
+in isolation, may be relatively uninformative, in order to arrive
+at a single \isi{parse}, a single percept, of what is heard. This percept
+is presumably the best alternative among those available to the listener
+(see \citealt{davis2007hearing} for a review of the literature). Although
+speech \isi{perception} appears extremely robust due to the fact that the
+meaning intended by the speaker is usually recoverable by the listener,
+that robustness is a property of the entire set of cues available,
+not of acoustic features alone, and certainly not of individual acoustic
+features. Rather than conceptualizing sound change as the relatively
+rare event in which the listener mishears, or the speaker misspeaks,
+it may be the case that what we typically think of as the “changed”
+variants are already present within the distribution of stored tokens,
+as one of multiple possible parses of each inherently ambiguous input
+signal.
+
+\section{Multiple parses}
+
+The classical way in which sound change is conceptualized is based
+on the assumption that there exists a unique, correct, \isi{sub-lexical}
+representation for each word. It is meaningless to speak of phoneme-level
+“errors” unless this is the case. Consider the following hypothetical
+example (where \emph{$x>y$} indicates an historical change from \emph{x}
+to \emph{y}):
+\begin{covexamples}
+\item \label{anpa>ampa}\emph{anpa \textgreater{} ampa}
+\end{covexamples}
+(\ref{anpa>ampa}) is a common type of change known as nasal place
+assimilation. In this example, the coronal feature of the nasal $/n/$
+is assimilated to (or replaced by) the labial feature of the following
+$/p/$. Speakers of a language that undergoes this change presumably
+had an earlier \isi{allophonic} rule specifying that $/n/$'s preceding
+stops take on the place features of that stop. Therefore, the change
+could only have occurred if they uncharacteristically failed to account
+for this rule, or they made the “wrong” choice for a \isi{production}
+that was especially strongly assimilated. In either case, listeners
+are assumed to \isi{parse} their acoustic input into a sequence of discrete
+phones, deciding for each segment whether to \isi{normalize} or accept at
+face value. Thus, for a change from \emph{/anpa/} to \emph{/ampa/}
+to have actually occurred in the way it is denoted here, it must be
+the case that listeners used to routinely segment continuous acoustic
+tokens of this word into the sequence of units \emph{/a/}, \emph{/n/},
+\emph{/p/}, \emph{/a/}, until they switched to segmenting
+those tokens into the sequence \emph{/a/}, \emph{/m/}, \emph{/p/},
+\emph{/a/}. 
+
+Of course, we know that a discrete series of abstract symbols (either
+\emph{[anpa]} or \emph{[ampa]}) is not present in the acoustic
+signal in any objective sense. The abstract notation also implies
+that this change occurs once, simultaneously, for all words, and for
+all word tokens. However, adopting the hypothesis that multiple experienced
+instances of speech are stored implies that change would have to occur
+over individual tokens. In fact, the multiple-\isi{parse} hypothesis is
+a logical consequence of the basic tenet of the \isi{exemplar} framework.
+The conflation of \isi{perception} and \isi{production} that we saw in the \isi{exemplar} models of Chapters~\ref{ch:The-Exemplar-Model} and~\ref{ch:Models-of-Change}
+is borrowed directly from the standard generative notation. Once a
+transformation from perceptual tokens to \isi{production} tokens is required,
+it becomes clear that 1) \isi{parsing} is necessary in the first place,
+and 2) it must occur for each experienced token. Recognizing
+that acoustic tokens are inherently ambiguous with respect to their
+decomposition into discrete units suggests, in turn, that variable
+parses might be the norm rather than the exception.\footnote{This is closely related to the proposal that stored lexical items
+can have more than one representation (see e.g. \citealp{hooper1976word,Janda2008,Bybee2001}).
+Split representations are also assumed to be the outcome of discontinuous
+\isi{articulatory} change in the model of \citet{Garrett2013}.} 
+
+In the nasal assimilation example, there are two obvious alternative
+parses, differing in whether they contain the \isi{phoneme} $/n/$ or $/m/$. Thus the word-level category \textit{anpa} is hypothesized to be composed
+of at least some tokens specified with \isi{production} targets for $/n/$,
+and some for $/m/$. However, additional possible parses exist if
+we do not assume the available \isi{phoneme} inventory \emph{a priori}.
+In fact, if we allow all universally possible segments into the analysis
+space, then we avoid the \isi{actuation} paradox of the classical diachronic
+approach. As the next section will show, this re-framing of the change
+question allows \isi{synchronic variation} to be linked to diachronic change
+in a way that is not dependent on either stopping or starting the
+model at a critical point in time. 
+
+\section{Multiple-Parse Phoneme Split Model}
+\largerpage
+The Multiple-Parse model explicitly assumes the existence of abstract categories
+intermediate between the word and the articulatory gesture. The change
+occurs in the distribution of variants that already exist, rather
+than in the genesis of entirely novel forms. This aspect bears some
+similarity to the proposal in \citet{Baker2011}, based on misanalysis
+of the signal, but the current model is not abrupt, nor does it require
+“extreme” variants to be adopted.
+
+For simplicity,
+only a single word type will be modeled, that consisting of a tongue
+body gesture followed by a \isi{velum} gesture (e.g. \textit{am}).  The conversion from \isi{perception} to \isi{production} is the locus of \isi{sub-lexical}
+\isi{parsing}, mapping every continuous acoustic token into a series of
+categorical units. In principle, these units can consist of any contiguous
+set as long as it is phonetically plausible, and exhaustively parses
+the input signal. However, in the case of \isi{vowel nasalization}, I will
+be concerned with two particular possibilities: the one-sublexical-unit
+analysis, and the two-sublexical-unit analysis. These are of special
+interest, of course, because they bear considerable similarity to
+the classical analyses of the phenomenon before change (two units),
+and after change (one unit). However, it is important to be careful
+in how these units are described, because the traditional notational
+system essentially forces an analysis more general than the
+word level. In order not to assume generalization, and remain representationally
+consistent, the following notation will be adopted for the two \isi{sub-lexical}
+parses of the word in question (\textit{am}): $/\tilde{V}_{am}/$ (Analysis
+1), and $/V_{am}/+/N_{am}/$ (Analysis 2). The desired implication
+is that only after generalization across multiple words could something
+similar to the abstract categories $/\widetilde{V}/$ and $/V/+/N/$
+arise.
+
+There are three articulatory parameters: $x^{V}$, the duration of the tongue body gesture, $x^{N}$, the duration of the velum lowering geature, and $x^{O}$, the duration of the overlap between the two. A single-unit \isi{parse}
+means that all three values will be stored on the \isi{production} side.
+$/\tilde{V}_{am}/$ is a 3-dimensional cloud, and \isi{entrenchment} applies
+over each dimension. The two-unit \isi{parse}, however, is explicitly a \noun{process}
+analysis, entailing that one token is drawn from a one-dimensional
+\emph{$/V_{am}/$} cloud, one from a one-dimensional \emph{$/N_{am}/$}
+cloud, with concatenation occurring at the time of \isi{production}. In
+other words, the overlap between the two gestures is not stored, but
+determined online. In which case, a default value of 25\% of the nasal duration is used.
+
+Either analysis is possible for any given token, but, critically,
+depends on the acoustic properties of that token. In this set of simulations
+it will be assumed that word-level categorization is correct, and
+that the three duration quantities ($x^{V},x^{N},x^{O}$)
+are accurately recovered in \isi{perception}, although this is not critical.\footnote{If the error term is symmetrical, then it will have no qualitative
+effect on the model dynamics.} Analysis 1, the single-segment analysis, is more likely to be selected,
+the more highly overlapped the gestures that produced that token,
+while Analysis 2, the 2-segments-in-sequence analysis, is more likely
+for less overlapped gestures. The specific dependence is on the quantity
+$Q={x^{O}}/{x^{N}}$. Larger values of $x^{O}$
+lead to larger values of $Q$, as do smaller values of $x^{N}$.
+Selecting for large \emph{Q} thus selects both for larger overlap
+and shorter word durations. That duration should correlate with number
+of constituents is a reasonable hypothesis. It can also be hypothesized
+that \isi{articulatory} gestures will tend to be more tightly coordinated
+within, than across, segments, if shared constituency promotes greater
+merger.\footnote{I am not aware of evidence for this specific relationship, but there
+is evidence for different types of \isi{gestural} coordination across different
+domains: between the onset and nucleus of a syllable, versus the nucleus
+and coda (\citealt{Browman1988,byrd1996influences}); and within,
+versus across, morpheme boundaries (\citealt{Cho2001}).} The probability of Analysis 1, $P(a=1)$, depends on \emph{Q} in
+the following way (\ref{eq:segmentation-1}).
+\begin{equation}
+P(a=1)=Ae^{-b(1-Q)}-C\label{eq:segmentation-1}
+\end{equation}
+Probability increases with increasing \emph{Q} because of the negative
+exponential in (\ref{eq:segmentation-1}). The largest possible value
+for \emph{Q} is 1, therefore $1-Q$ is always positive. When $Q=1$
+, $P(a=1)$ reaches its maximum at $A-C$. How quickly the probability
+decreases as a function of decreasing \emph{Q} is controlled by the
+variable \emph{b. }The larger \emph{b}, the larger the negative exponential,
+and the more quickly $P(a=1)$ decreases, selecting for larger mean
+\emph{Q} values (and fewer tokens). See Appendix \ref{chap:Appendix E}
+for additional details.
+
+If Analysis 1 is chosen in \isi{perception}, based on the value of $P(a=1)$,
+then all three values of the token are stored. If Analysis 2 is chosen,
+then the duration of the \isi{tongue body} gesture ($x^{V}$), and the
+duration of the \isi{velum} gesture ($x^{N}$), are each stored in separate
+categories, and the overlap value is discarded. Figure \ref{fig:MultiParse-Reps}
+provides a schematic depiction of these relationships. Note that the
+dimensions are not accurately represented here; two dimensions are
+used for all categories to make the membership relationships easier
+to see. Individual tokens are drawn as schematic \isi{gestural} scores:
+extent represents time, and fill type represents active \isi{articulator}.
+Where the two bars appear together, horizontal alignment indicates the stored \isi{gestural} overlap parameter. The thin
+lines drawn between tokens of different sub-categories indicate that
+they are stored together, and will be produced together. However, overlap must
+be determined separately because it is not stored as part of the experienced token. Entrenchment happens only
+within individual \isi{sub-lexical} categories.\footnote{If \isi{entrenchment} at the word level is added it will have the effect
+of pushing values back towards the means of the Analysis 2 categories,
+since the model is initialized with those values, and the Analysis 2
+\isi{parse} is more likely for most of the frequency values used.} Soft targets for each sub-category act to keep tokens at their starting values. 
+
+\begin{figure}[h]
+\includegraphics[width=0.66\textwidth]{figures/MultiParseModel.pdf}\caption{\label{fig:MultiParse-Reps}Schematic depiction of the relationships
+between the word-level category (\textit{am}) and the sub-lexical level
+categories of its constituents. Production-side representations.}
+\end{figure}
+
+Tokens are chosen randomly for \isi{production} from among all stored values, using the default overlap value for Analysis-2
+tokens. There is no \isi{phonetic} \isi{bias} in this
+model. However, frequency acts to shorten $x^{N}$ and $x^{V}$, and lengthen $x^{O}$, resulting in a feedback loop. 
+
+\section{Frequency}\largerpage[1.75]
+
+It has been shown that individual segments within high-\isi{frequency}
+words are shorter, and that they are more likely to exhibit “deletions”
+(dropping, or masking of a consonant, or unstressed vowel, e.g.
+\citealt{Bell2003,Raymond2006,Bybee2008}). The realizations of segments
+in higher-\isi{frequency} words tend also to be less extreme, or more “centralized”,
+perhaps failing to reach the usual \isi{articulatory} \isi{target} (e.g. 
+\citealt{munson2004effect,Scarborough2004,gahl2008time}).
+
+The listener-based account of \isi{frequency} effects explains these phenomena
+as a consequence of contextual predictability. It is actually the
+less predictable, less easy to access, more confusable, forms that
+are produced with particular care (hyper-articulated) by the speaker
+in order to aid intelligibility (e.g. \citealt{Aylett2004}). In
+the absence of that pressure, articulations are reduced to the degree
+possible, facilitating the task of the speaker. Factors that have
+been shown to affect predictability, as well as word form, include
+sentence, or discourse, context, bigram \isi{frequency}, and unigram \isi{frequency},
+among others. Nevertheless, there are a number of results that are
+not compatible with a strictly listener-based theory, studies that
+have shown that speakers do not always alter their productions in
+such a way as to facilitate listener comprehension (see \citealt{turnbull2015assessing}
+for a review of the literature).
+
+As mentioned briefly in \sectref{subsec:Word-Frequency}, the
+speaker-based approach attributes \isi{frequency} effects to automatic production-side
+mechanisms. This is usually couched in terms of activation levels,
+within some kind of lexical network model where different representations
+“compete” in both \isi{perception} and \isi{production} (e.g. \citealp{mcclelland1981interactive,Dell1986}).
+In terms of word retrieval, the successful candidate is the one that
+achieves a given threshold of activation first. Every time a word
+is accessed, or produced, it is activated to this level. Repeated
+activations, within some time period, are taken to result in some
+level of residual activation that persists even when the word is not
+selected. This “resting” activation level is naturally higher
+in higher \isi{frequency} words, giving them a head start against lower-\isi{frequency}
+competitors. 
+
+The resting-activation account is in line with results establishing
+that higher-\isi{frequency} words are produced earlier than lower-\isi{frequency}
+ones in a variety of tasks, such as picture naming, and word or sentence
+reading – even with delays. Higher-\isi{frequency} words also lead to faster
+response times in lexical decision and other speeded response tasks,
+as well as to greater accuracy in word recognition (e.g. \citealt{howes1951visual,balota1985locus,Luce1986,Marslen-Wilson1990}).
+However, it is not at all obvious that higher \isi{resting activation} alone
+can account for \isi{articulatory} or temporal reduction (hypo-articulation).
+
+In fact, it has been argued \emph{both} that a higher activation level
+should lead to hyper-articulation (e.g. \citealt{Baese-Berk2009}),
+and that it should lead to hypo-articulation (e.g. \citealt{gahl2012reduce}).\footnote{Note that different results were obtained in these studies, one based
+on laboratory data, and one on conversational corpus data.} In works that adopt the latter position, the connection seems to
+be assumed. For example, \citet[79]{gahl2012reduce}
+write that “Production-based accounts ... would lead one to expect
+that words that are retrieved quickly tend to be phonetically reduced
+– \emph{provided that fast retrieval speed translates into fast \isi{production}
+speed”} (emphasis mine).
+
+The fact that there does not appear to be a well-worked out mechanism
+for this result raises the possibility that we have yet to find the
+right model for \isi{frequency}. Empirically, however, the correlation between
+shorter/faster productions and higher word \isi{frequency} seems quite robust. Note that the
+\isi{frequency} effect in this model acts on all tokens, both stored and
+generated. In the latter case, we must assume that some type of motor
+plan involving the concatenation of $/V_{am}/$ and $/N_{am}/$ is
+associated with a \isi{resting activation} value that affects the duration
+of the resulting word. 
+
+\section{Speaking rate}
+
+At \isi{production}, a value is randomly selected from
+a normal distribution centered about 0. This value represents the
+force (\emph{E}) that will act on that token: either to expand it
+(if positive), or to compress it (if negative). Expansion results
+in longer words, corresponding to slower speaking rates, and compression
+results in shorter words, corresponding to faster speaking rates.\footnote{This acts analogously to a production error term.}
+Each \isi{articulatory} parameter is independently subjected to this force.
+The degree to which a given gesture is actually expanded or compressed
+depends on how inherently elastic it is. This elasticity is implemented
+as a parameter that controls the steepness of a logistic curve. For
+example, the effect of force \emph{E} acting on the overlap variable
+($x^{O}$) is given in Equation (\ref{eq:Speaking rate transform}): 
+\begin{equation}
+x^{O}=\frac{A}{(1+e^{kE})}\label{eq:Speaking rate transform}
+\end{equation}
+\emph{A} is a \isi{normalization} factor, and is set to $2x^{Z}$
+for all variables (\emph{Z}). This has the effect of making the adjusted
+\isi{length} depend on the current \isi{length}, with $E=0$ resulting in no change.
+Note that for decreases in \isi{speaking rate}, overlap should decrease
+– pulling the two gestures apart, and thus \isi{lengthening} the word –, while for increases in \isi{speaking rate}, overlap should increase. Therefore,
+the dependence of overlap on expansion degree is expressed as a positive
+exponential, while the dependence of the other two duration parameters
+is expressed as a negative exponential. For these simulations all
+three \isi{articulatory} variables were set to the same elasticity ($k=1$).  The effect of \isi{frequency} (f) was implemented as a negative perturbationto the mean value of the expansion force distribution: ${E}^{\prime}={E}-{\beta}f$. See Appendix \ref{chap:Appendix E}
+for full model details.
+
+\section{Results}
+
+The model was run for 10,000 iterations for each of 8 frequency, or resting activation, values. Note that the number of iterations is essentially
+arbitrary. Because the number is large, there is a reasonable
+expectation that a stable state has been reached, but no tests of
+convergence were performed.  The function for selecting the analysis for a given token, and the function for determining durations from expansion force make this model slightly more complex, but it is at root  a  \noun{process} model, with a shortening force competing against an inertial force pulling in the direction of the attractor for each sub-category. The results of Chapter 4 indicate that it should be possible to find stable states.\footnote{Note that in the first edition of this book it was erroneously claimed that speaking rate could balance the frequency effect. In fact, the effects of speaking rate cancel out, as it applies equally in both directions.}
+
+In Figure \ref{fig:Multiple-Parse-Results}, mean values for the three duration parameters are given for each of
+the categories - Panel 1: word-level; Panel 2: Analysis 1 tokens; Panel
+3: Analysis 2 tokens. Note that the overlap proportion in Panel 3
+shows the constraint that overlap proportion stay fixed with respect
+to $\overline{x^{N}}$, at 25\%. Whereas, in Panel 2, as \isi{resting activation}
+(\isi{frequency}) increases, the proportion overlap increases. The
+number of tokens parsed into the $/\tilde{V}_{am}/$ category also 
+increases with increasing \isi{resting activation} (from approximately 19\%
+to 55\%). Both factors act to increase the overlap proportion for the word-level category
+as a whole (Panel 1). 
+
+
+
+\begin{figure}[h]
+\includegraphics[width=.70\textwidth]{figures/MultipleParseResults_Revised.pdf}
+\caption{\label{fig:Multiple-Parse-Results}Multiple-Parse Model: Results as
+a function of resting activation (word frequency). Each point corresponds to a mean articulatory duration, reached after 10,000 model iterations. Panel 1: all word tokens; Panel 2: Analysis-1 tokens
+only; Panel 3: Analysis-2 tokens only.}\is{articulatory}
+\end{figure}
+
+\section{Actuation}
+
+The model implements
+a theory of nasal vowel genesis as an emergent property of gradient
+effects acting directly on \isi{articulatory} parameters. For a given frequency, tokens produced at faster speaking rates will have higher Q values, and thus be more likely to be analyzed as a single articulatory unit. The consequence of this is that the overlap value will be stored. As frequency increases, stored overlap values can now also increase. Meanwhile, tokens produced at slower rates continue to default to a fixed overlap percentage.
+
+Only in the special
+case where overlap is roughly equivalent to nasal duration, would
+the data likely be analyzed (by a linguist) as the result of \isi{phoneme}
+split. This state in the model, however, has no special status. There is no single moment
+at which a sound change occurs in the Multiple-Parse Phoneme-Split
+Model. Every instance of \isi{perception} involves a decision about \isi{parsing}
+which is based on existing \isi{synchronic variation}. And every available
+\isi{parse} is a possibility at any time, for any token; it is the probabilities
+of those parses which change as frequency changes. Conceptualizing \isi{phoneme split} in this way allows us to avoid the \isi{actuation}
+paradox that requires the loss of the conditioning environment, but
+the retention of the conditioned \isi{allophone} (see \sectref{sec:Actuation-1}). 
+
+Although the nasal vowel \isi{parse}
+is assumed in the sense that it is one possible analysis for a given
+token, this model, in fact, avoids many limiting assumptions about
+the nature of sound change inherent to the classical view. For example,
+the \emph{/V+N/} analysis is not privileged, beyond having a higher
+probability of selection, given the starting distribution. Additional
+analyses can be added to the set of \isi{parsing} hypotheses, if motivated
+by general-purpose properties of speech \isi{perception}. It is consistently
+the word level at which all forces act in this model, and at the level
+of \isi{articulatory} gesture that changes are realized. In particular,
+this model does not rely on the \isi{allophonic} level at which the \isi{synchronic}
+rule, and the diachronic change, are assumed to occur. As a result,
+the \isi{normalization}/lack of \isi{normalization} question becomes a basic element
+of speech processing: the analysis that must occur when perceptual
+values are transformed into \isi{production} values. 
+
+If classification occurs at the word level, and words have \isi{articulatory}
+representations something like \isi{gestural} scores, then it is not necessary
+to first identify a series of abstract phonemes in order to identify
+individual words. Thus, the problem of “compensating” for (the
+feature of) \isi{nasalization} at the level of the \isi{phoneme} disappears. The
+ambiguity remains regarding the proper \isi{articulatory} realization of
+a given acoustic input, but there is no longer a unique, correct \isi{sub-lexical}
+analysis. The possible analyses available to the listener, based on
+their \isi{phonetic} experience, should always include, at minimum, both
+the “normalized” option, as well as the “\isi{unnormalized}”
+one.
+
+In the specific simulations reported in the previous section, the
+average percentage of the \isi{velum} lowering gesture that occurred simultaneously with the \isi{tongue body} gesture varied from 25\%, at the lowest resting activation, to about 61\% for the highest resting activation. It was also the
+case that absolute gesture durations were shorter
+at higher frequencies. These results describe a diachronic change
+under the scenario in which a single word comes to be used more, or
+less, frequently over time. Under the scenario in which frequencies
+are fixed, but there exists a set of words with a range of different
+frequencies, these results describe a \isi{synchronic} distribution. The
+model thus generates at least two testable predictions: 1) that a
+difference in the degree of \isi{vowel nasalization} should be observed
+across words of different frequencies (provided the relevant \isi{phonological}
+context is sufficiently similar among those words), and 2) that the
+highest-\isi{frequency} words should approximate the degree of \isi{vowel nasalization}
+observed in languages that are described as having phonemically nasal
+vowels. In other words, no exaggeration, or enhancement, of the effect
+is required in this model. Lexicon-wide change is assumed to start
+with change at the individual word level.
+
+It is widely acknowledged that change (of certain kinds, at least)
+happens on a word by word basis (e.g. \citealt{Phillips1984,Bybee2002,Pierrehumbert2002}),
+and that some words can be ``further along'' in the change than others.
+With regards to nasalized vowels in particular, \citet{malecot1960vowel}
+offers evidence that the distinction between English words like \textit{cap}
+and \textit{camp} is primarily that between a nasal and oral vowel
+({[kæp]} vs. {[kæ̃p]}), rather than the presence
+versus absence of a nasal consonant ({[kæp]} vs. {[kæ̃mp]}).
+The English segmental inventory is not usually analyzed as containing
+an abstract nasal vowel (although see \citealt{Sole1992} for an argument
+that nasal vowels are phonologically specified). Nevertheless, individual
+tokens, or individual words, or even classes of words, may have \isi{phonetic}
+realizations that are indistinguishable from those generated from
+an underlying nasal vowel. 
